@@ -1,3 +1,38 @@
+#First we define the kick and the drift functions for the integration scheme
+
+#This is kick function with interaction terms. It updates the velocities. 
+def kick(h,p,q,dp,dq,d2pSum,d2qSum,scnd_ord,alpha):
+    if alpha == 0:
+        if scnd_ord == True:    
+            d2phi_a = -2.*h*dp*dq/np.tan(q)
+            d2phi_b = h**2*(2.*dp*dq**2/np.tan(q)**2 - dp**3*np.cos(q)**2)
+            d2theta_a = (h/2.)*np.sin(2*q)*dp**2
+            d2theta_b = -2*h**2*dp*dq**2*np.cos(q)**2
+            return dp + d2phi_a + d2phi_b, dq + d2theta_a + d2theta_b
+        else: 
+            d2phi_a = -2.*h*dp*dq/np.tan(q)
+            d2theta_a = (h/2.)*np.sin(2*q)*dp**2
+            return dp + d2phi_a, dq + d2theta_a
+    else: 
+        if scnd_ord == True:    
+            d2phi_a = -2.*h*dp*dq/np.tan(q)
+            d2phi_b = h**2*(2.*dp*dq**2/np.tan(q)**2 - dp**3*np.cos(q)**2)
+            d2theta_a = (h/2.)*np.sin(2*q)*dp**2
+            d2theta_b = -2*h**2*dp*dq**2*np.cos(q)**2
+            return dp + d2phi_a + d2phi_b, dq + d2theta_a + d2theta_b
+        else: 
+            d2phi_a = h*(alpha*(d2pSum/np.sin(q))-(2.*dp*dq/np.tan(q)))
+            d2theta_a = h*(alpha*d2qSum + (1/2.)*np.sin(2*q)*dp**2)
+            return dp + d2phi_a, dq + d2theta_a
+
+#This is the drift function that updates the positions. 
+def drift(h,p,q,dp,dq):
+    p += h*dp
+    q += h*dq
+    return p, q
+
+#Now we define the main integration function
+
 scnd_ord = False                 #Can choose if the scheme is of second order or not
 thresh = np.sin(np.pi/4)         #Threshold value in first cover for which we switch from one cover to the other in the scheme
 
