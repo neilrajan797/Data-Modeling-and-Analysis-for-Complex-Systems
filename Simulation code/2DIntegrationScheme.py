@@ -1,5 +1,5 @@
-scnd_ord = False
-thresh = np.sin(np.pi/4)
+scnd_ord = False                 #Can choose if the scheme is of second order or not
+thresh = np.sin(np.pi/4)         #Threshold value in first cover for which we switch from one cover to the other in the scheme
 
 def integration(N,Nt,h,alpha,M,phi_0,theta_0,dphi_0,dtheta_0): 
     xVals_1 = np.ones((Nt,2,N))                         #An array to store position values at full steps in first cover. The ith array will have values of phi and theta at the time t = i*dt
