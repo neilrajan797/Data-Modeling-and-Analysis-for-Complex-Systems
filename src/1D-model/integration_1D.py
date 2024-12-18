@@ -1,14 +1,4 @@
-def OneDHam(p,dp,N,alpha,M):                #Computes 1D hamiltonian 
-    pi = np.outer(p,np.ones(N))
-    pj = np.outer(np.ones(N),p)
-    arg = pi - pj
-    cos_arg = np.cos(arg)
-    U = -(alpha*(M/N)**2)*(np.sum(cos_arg)-N)/2     #Total potential energy
-    K = (M*np.dot(dp,dp))/(2*N)           #Total kinetic energy
-    H = K+U 
-    return H
-
-def derivs(y,N,alpha):
+def derivs(y,N,alpha):                     #Returns the derivative of the vector y = (phi, dphi)
     dy = np.zeros_like(y)
     dy[0,:] = y[1,:]           #dtheta
     xi = np.outer(y[0,:],np.ones(N))
