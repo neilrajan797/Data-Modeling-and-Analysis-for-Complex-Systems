@@ -1,17 +1,17 @@
-def derivs(y,N,alpha):                     #Returns the derivative of the vector y = (phi, dphi)
+def derivs(y,N,alpha):                     #Returns the time derivative of the vector y = (theta, dtheta) 
     dy = np.zeros_like(y)
-    dy[0,:] = y[1,:]           #dtheta
+    dy[0,:] = y[1,:]                       #First component of dy/dt, dtheta, comes from second component of y vector
     xi = np.outer(y[0,:],np.ones(N))
     xj = np.outer(np.ones(N),y[0,:])
     arg = xi - xj               
-    dy[1,:] = -((alpha*M**2)/N)*np.matmul(np.sin(arg),np.ones(N)) #d^2theta
+    dy[1,:] = -((alpha*M**2)/N)*np.matmul(np.sin(arg),np.ones(N)) #This is the second derivative of theta 
     return dy
 
-def OneD_Integrate(N,Nt,h,p0,dp0,alpha,M):
+def OneD_Integrate(N,Nt,h,theta0,dtheta0,alpha,M):
     yVals = np.zeros((Nt,2,N))       #To store phase space coordinates for all times
     y = np.zeros((2,N))
-    y[0,:] = p0
-    y[1,:] = dp0
+    y[0,:] = theta_0
+    y[1,:] = dtheta_0
     yVals[0,:] = y
     time = np.zeros(Nt)
     
