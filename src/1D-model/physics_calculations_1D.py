@@ -11,3 +11,12 @@ def OneDHam(theta,dtheta,N,alpha,M):            #Computes 1D hamiltonian
     K = (M*np.dot(dtheta,dtheta))/(2*N)         #Total kinetic energy
     H = K+U 
     return H
+
+def OneD_CM(theta):      #Get theta polar coordinate of center of mass for 1D-HMF
+    x = np.cos(theta)    #First covert to cartesian coordinates
+    y = np.sin(theta)
+    xmean = np.mean(x)   #Get the mean values for x and y
+    ymean = np.mean(y)  
+    theta_CM = np.arctan2(ymean,xmean)       #Find the polar angle corresponding to the point (xmean,ymean)
+    theta_CM = np.mod(theta_CM,2.*np.pi)     #Make sure angle is in interval [0,2pi)
+    return theta_CM
