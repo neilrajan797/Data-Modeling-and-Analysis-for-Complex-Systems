@@ -165,6 +165,3 @@ def TwoToOne_u(psi,chi,psi_dot,chi_dot):
     phi_dot = (x*ydot - y*xdot)/(y**2 + x**2)
     theta_dot = -zdot/np.sin(theta)
     return phi_dot,theta_dot
-
-def zeroToPi(...): 
-    # Code here...
