@@ -1,3 +1,5 @@
+import numpy as np
+
 def UTot_1D(theta,N,alpha,M):                    #Computes total potential energy of system
     theta_i = np.outer(theta,np.ones(N))
     theta_j = np.outer(np.ones(N),theta)
