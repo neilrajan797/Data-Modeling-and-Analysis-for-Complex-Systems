@@ -15,6 +15,7 @@ Functions:
     - OneD_Integrate: Integrates the equations of motion using a second-order Runge-Kutta scheme.
 """
 
+import numpy as np
 
 def derivs(y, N, alpha):
     """
