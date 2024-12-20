@@ -12,10 +12,10 @@ Dependencies:
 - physics_calculations_2D.py: For energy and interaction calculations.
 - utilities_2D.py: For helper functions like `kick` and `drift`.
 """
+
 import numpy as np
 from coordinate_transformations import Cov1_to_Cov2, Cov2_to_Cov1, OneToTwo_x, TwoToOne_x
-from physics_calculations_2D import K_tot, U_tot
-from utilities_2D import kick, drift, sphere
+from kick_drift_kick import kick, drift
 
 scnd_ord = False
 thresh = np.sin(np.pi/4)
