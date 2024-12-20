@@ -17,8 +17,8 @@ def kick(h,p,q,dp,dq,d2pSum,d2qSum,scnd_ord,alpha):
         q (numpy.ndarray): Current latitudes (theta or chi).
         dp (numpy.ndarray): Current velocities in longitude direction.
         dq (numpy.ndarray): Current velocities in latitude direction.
-        d2pSum (numpy.ndarray): Interaction terms for longitude acceleration.
-        d2qSum (numpy.ndarray): Interaction terms for latitude acceleration.
+        d2pSum (numpy.ndarray): Sum in interaction terms for longitude acceleration.
+        d2qSum (numpy.ndarray): Sum in interaction terms for latitude acceleration.
         scnd_ord (bool): Flag to include second-order corrections.
         alpha (float): Coupling constant for the system.
 
