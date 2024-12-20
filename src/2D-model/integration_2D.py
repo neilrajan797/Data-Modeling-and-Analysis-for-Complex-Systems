@@ -17,6 +17,8 @@ import numpy as np
 from coordinate_transformations import Cov1_to_Cov2, Cov2_to_Cov1, OneToTwo_x, TwoToOne_x
 from kick_drift_kick import kick, drift
 
+"NOTE!!! yOU HAVE TO MAKE SURE YOU'VE IMPORTED ALL FUNCTIONS FROM OTHER FILES THAT ARE NECESSARY FOR THIS ONE. DO THIS WITH OTHER FILES AS WELL"
+
 scnd_ord = False
 thresh = np.sin(np.pi/4)
 
