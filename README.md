@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project implements advanced numerical integration schemes to simulate complex N-body systems. Originally developed for studying 1D and novel 2D Hamiltonian Mean Field (HMF) models, the framework has been re-engineered into a modular simulation platform. It bridges rigorous algorithm development with modern predictive modeling—showcasing techniques analogous to those used in data science and software engineering.
+This project is a Python-based simulation platform for large celestial systems. It implements advanced numerical integration techniques to model the evolution of complex, interacting systems. While inspired by astrophysical models, the core methodologies and skills demonstrated here are directly applicable to solving real-world business problems such as resource optimization, risk analysis, and dynamic forecasting.
 
 ## Key Features
 
