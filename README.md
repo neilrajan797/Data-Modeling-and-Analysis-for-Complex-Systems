@@ -1,4 +1,4 @@
-# Dynamic Predictive Modeling with N-Body Simulation Algorithms
+# Predictive Modeling with Simulation Algorithms for Celestial Bodies
 
 *A simulation framework employing advanced numerical integration methods to predict the behavior of complex, interacting systems.*
 
