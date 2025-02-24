@@ -1,50 +1,41 @@
-# 🔄 Particle Dynamics Simulator  
-**Python | Numerical Algorithms | Data Visualization | Scalable Systems**  
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![Demo](https://img.shields.io/badge/View-Results-blue)](README.md#-key-results)  
+# Dynamic Predictive Modeling with N-Body Simulation Algorithms
 
-Simulate and analyze large-scale particle interactions with custom numerical solvers.  
+*A simulation framework employing advanced numerical integration methods to predict the behavior of complex, interacting systems.*
 
----
+## Overview
 
-## 🚀 **In 10 Seconds**  
-- **Built**: Scalable simulator for 10,000+ particles using Runge-Kutta and custom integration methods.  
-- **Solved**: Numerical instability in spherical coordinates with a novel "double-cover" algorithm.  
-- **Validated**: Predicted particle clustering and energy trends against theoretical benchmarks.  
+This project implements advanced numerical integration schemes to simulate complex N-body systems. Originally developed for studying 1D and novel 2D Hamiltonian Mean Field (HMF) models, the framework has been re-engineered into a modular simulation platform. It bridges rigorous algorithm development with modern predictive modeling—showcasing techniques analogous to those used in data science and software engineering.
 
-**Relevant to**: Predictive modeling, dynamical systems, and algorithm optimization.  
+## Key Features
 
----
+- **Algorithm Innovation:**  
+  - Implements a second-order Runge–Kutta method for 1D simulations.
+  - Features a custom kick-drift-kick scheme (modified leap-frog) for 2D simulations.
 
-## 🔑 **Key Features**  
-- **1D/2D Solvers**:  
-  - RK2 integrator (energy error < 1e-8).  
-  - Kick-drift-kick method for spherical systems.  
-- **Scalability**: Tested with 10k particles on consumer hardware.  
-- **Analysis Tools**: Automated phase-space/density profile comparisons.  
+- **Predictive Modeling:**  
+  - Compares simulation outputs (e.g., density profiles and velocity dispersions) with theoretical distributions, translating physics-based results into industry-relevant insights.
 
----
+- **Performance & Error Analysis:**  
+  - Provides benchmarks and error analysis to demonstrate convergence and stability—key for optimizing complex computational models.
 
-## 🛠 **Tech Stack**  
-- **Python** (NumPy, Matplotlib)  
-- **Testing**: pytest, Hamiltonian conservation checks  
-- **Tools**: Git, Jupyter, GitHub Actions  
+- **Visualization & Data Analysis:**  
+  - Includes detailed visualizations of phase space structures and simulation dynamics, enabling clear communication of model behavior and performance.
 
----
+## Technologies Used
 
-## 📊 **Key Results**  
-| ![Phase Space](assets/phase_space.gif) | ![Energy Plot](assets/energy_plot.png) |  
-|:--:|:--:|  
-| *Particle clustering (Thesis Fig 7-8)* | *Kinetic energy oscillations (Thesis Fig 10)* |  
+- **Programming Language:** Python
+- **Key Libraries:**  
+  - NumPy
+  - SciPy
+  - Matplotlib
+- **Tools & Environments:**  
+  - Jupyter Notebook for interactive simulation demos
+  - Git for version control
 
-**Proven Metrics**:  
-- Reduced numerical drift by **62%** with adaptive time-stepping.  
-- Detected non-equilibrium states contradicting classical statistical models.  
+## Installation & Setup
 
----
+1. **Clone the Repository:**
 
-## ⚡ **Quick Start**  
-1. Clone the repo:  
-```bash  
-git clone https://github.com/yourusername/particle-simulator  
-cd particle-simulator  
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
