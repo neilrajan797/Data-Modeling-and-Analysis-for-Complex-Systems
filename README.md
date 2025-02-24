@@ -1,4 +1,4 @@
-# Predictive Modeling with Simulation Algorithms for Celestial Bodies
+# Predictive Modeling with Simulation Algorithms for Celestial Systems
 
 *A simulation framework employing advanced numerical integration methods to predict the behavior of complex, interacting systems.*
 
