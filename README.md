@@ -37,7 +37,7 @@ These systems are classic in statistical mechanics because they display clusteri
 ## Example Results
 
 - **1D HMF Phase Space Evolution**  
-  *[Insert plot here: density profiles and $(\theta,\dot{\theta})$ phase space spirals]*
+  ![1D HMF density, phase space, and kinetic energy](figures/1D_dens_PS_KE.png)
 
 - **2D HMF Phase Space Evolution**  
   *[Insert plot here: $(\phi,\theta)$ evolution and kinetic energy oscillations]*
@@ -80,4 +80,5 @@ This repository currently provides the physics simulation framework and results 
 4. Package code for reproducibility and add interactive visualization of order parameter dynamics.
 
 ---
+
 
