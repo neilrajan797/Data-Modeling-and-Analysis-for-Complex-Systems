@@ -64,8 +64,6 @@ By combining **1D tightness (liquidity clustering)** and **2D instabilities (fra
 ## Repository Structure
 
 - `/src` – core simulation code for 1D and 2D HMF.  
-- `/notebooks` – Jupyter notebooks with visualizations and analysis.  
-- `/docs` – full thesis write-up and derivations.  
 - `README.md` – project overview (this file).  
 
 ---
@@ -80,6 +78,7 @@ This repository currently provides the physics simulation framework and results 
 4. Package code for reproducibility and add interactive visualization of order parameter dynamics.
 
 ---
+
 
 
 
