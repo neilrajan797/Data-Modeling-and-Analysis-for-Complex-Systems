@@ -1,33 +1,83 @@
-# Predictive Modeling with Simulation Algorithms for Celestial Systems
+# Hamiltonian Mean Field (HMF) Simulations
 
-*A simulation framework employing advanced numerical integration methods to predict the behavior of complex, interacting systems.*
+This repository contains work on the **Hamiltonian Mean Field (HMF) model** in both one and two dimensions, with ongoing extensions toward applications in **financial market microstructure**.
 
-## Overview
+---
 
-This project is a Python-based simulation platform for large celestial systems. It implements advanced numerical integration techniques to model the evolution of complex, interacting systems. While inspired by astrophysical models, the core methodologies and skills demonstrated here are directly applicable to solving real-world business problems such as resource optimization, risk analysis, and dynamic forecasting.
+## Project Overview
 
-## Key Features
+The HMF model is a simplified $N$-body system with long-range cosine interactions.  
+- In **1D**, particles lie on a circle and interact through the cosine of their angular separation.  
+- In **2D**, particles are constrained to a sphere, with interactions depending on angular distance across great circles.  
 
-- **Algorithm Innovation:**  
-  - Implements a second-order Runge–Kutta method for 1D simulations.
-  - Features a custom kick-drift-kick scheme (modified leap-frog) for 2D simulations.
+These systems are classic in statistical mechanics because they display clustering, collective phases, and non-equilibrium instabilities. The same features make them promising analogies for **order book dynamics** in financial markets, where liquidity and volatility emerge from collective trader behavior.
 
-- **Predictive Modeling:**  
-  - Compares simulation outputs (e.g., density profiles and velocity dispersions) with theoretical distributions, translating physics-based results into industry-relevant insights.
+---
 
-- **Performance & Error Analysis:**  
-  - Provides benchmarks and error analysis to demonstrate convergence and stability—key for optimizing complex computational models.
+## Core Contributions
 
-- **Visualization & Data Analysis:**  
-  - Includes detailed visualizations of phase space structures and simulation dynamics, enabling clear communication of model behavior and performance.
+- **1D-HMF Simulations**  
+  - Implemented using a second-order Runge–Kutta scheme.  
+  - Explored equilibrium density and velocity dispersion profiles.  
+  - Tested Maxwell–Boltzmann distribution predictions against $N$-body simulations.  
+  - Demonstrated phase transitions: uniform → clustered states below a critical temperature.  
 
-## Technologies Used
+- **2D-HMF Simulations**  
+  - Developed a **kick–drift–kick integration scheme** with a double-cover method to handle spherical coordinate singularities.  
+  - Showed collapse/dispersion cycles and the absence of stable clustering equilibria.  
+  - Connected dynamics to **radial orbit instabilities**, an important phenomenon in astrophysical systems.  
 
-- **Programming Language:** Python
-- **Key Libraries:**  
-  - NumPy
-  - SciPy
-  - Matplotlib
-- **Tools & Environments:**  
-  - Jupyter Notebook for interactive simulation demos
-  - Git for version control
+- **Numerical Techniques**  
+  - Runge–Kutta (RK2) for 1D.  
+  - Modified leap-frog / kick–drift–kick scheme for 2D.  
+  - Double-cover method for stability near poles.
+
+---
+
+## Example Results
+
+- **1D HMF Phase Space Evolution**  
+  *[Insert plot here: density profiles and $(\theta,\dot{\theta})$ phase space spirals]*
+
+- **2D HMF Phase Space Evolution**  
+  *[Insert plot here: $(\phi,\theta)$ evolution and kinetic energy oscillations]*
+
+These figures illustrate how clustering and collective oscillations emerge naturally from the HMF dynamics.
+
+---
+
+## Why This Matters for Finance
+
+Although developed for astrophysical systems (e.g., dark matter halos), the HMF framework has a natural mapping to markets:
+
+- **Particles ↔ Orders**: Each particle corresponds to a limit order in the book.  
+- **Angles ↔ Price Levels**: A particle’s angular position represents relative price depth from the midprice.  
+- **Weights ↔ Order Sizes**: Particle mass = order volume.  
+- **Order Parameter (Magnetization $M$)**: Captures how concentrated orders are around best bid/ask → a **tightness/liquidity measure**.  
+- **Phase Transitions**: Analogous to fragile vs. resilient market regimes.  
+- **Instabilities (2D case)**: Map to liquidity shocks and volatility bursts in the order book.
+
+By combining **1D tightness (liquidity clustering)** and **2D instabilities (fragility)**, this project sets up a physics-based framework for **forecasting spreads, depth resilience, and short-horizon volatility**.
+
+---
+
+## Repository Structure
+
+- `/src` – core simulation code for 1D and 2D HMF.  
+- `/notebooks` – Jupyter notebooks with visualizations and analysis.  
+- `/docs` – full thesis write-up and derivations.  
+- `README.md` – project overview (this file).  
+
+---
+
+## Status & Next Steps
+
+This repository currently provides the physics simulation framework and results from the thesis. Next steps will focus on **bridging physics and finance**:
+
+1. Extend HMF simulations to synthetic order book data.  
+2. Define an HMF-based “tightness” index as a liquidity proxy.  
+3. Explore connections between clustering/instabilities and **volatility spikes** in real high-frequency trading data.  
+4. Package code for reproducibility and add interactive visualization of order parameter dynamics.
+
+---
+
