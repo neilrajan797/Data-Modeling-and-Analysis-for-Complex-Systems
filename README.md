@@ -1,4 +1,6 @@
-# Hamiltonian Mean Field (HMF) Simulations
+# Overview
+
+**Physics → Markets.** This repo studies the **Hamiltonian Mean Field (HMF) model** in 1D and 2D and maps its collective dynamics to **limit order book (LOB)** behavior in financial markets. HMF’s clustering, phase transitions, and non-equilibrium instabilities provide clean analogies for **liquidity provision, order-flow shocks,** and **volatility bursts**.
 
 The HMF model is a simplified $N$-body system with long-range cosine interactions.  
 - In **1D**, particles lie on a circle and interact through the cosine of their angular separation.  
@@ -70,6 +72,7 @@ This repository currently provides the physics simulation framework and results 
 4. Package code for reproducibility and add interactive visualization of order parameter dynamics.
 
 ---
+
 
 
 
