@@ -1,7 +1,5 @@
 # Hamiltonian Mean Field (HMF) Simulations
 
-##Overview
-
 The HMF model is a simplified $N$-body system with long-range cosine interactions.  
 - In **1D**, particles lie on a circle and interact through the cosine of their angular separation.  
 - In **2D**, particles are constrained to a sphere, with interactions depending on angular distance across great circles.  
@@ -72,6 +70,7 @@ This repository currently provides the physics simulation framework and results 
 4. Package code for reproducibility and add interactive visualization of order parameter dynamics.
 
 ---
+
 
 
 
