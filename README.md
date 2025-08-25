@@ -1,16 +1,10 @@
 # Hamiltonian Mean Field (HMF) Simulations
 
-This repository contains work on the **Hamiltonian Mean Field (HMF) model** in both one and two dimensions, with ongoing extensions toward applications in **financial market microstructure**.
-
----
-
-## Project Overview
+##Overview
 
 The HMF model is a simplified $N$-body system with long-range cosine interactions.  
 - In **1D**, particles lie on a circle and interact through the cosine of their angular separation.  
 - In **2D**, particles are constrained to a sphere, with interactions depending on angular distance across great circles.  
-
-These systems are classic in statistical mechanics because they display clustering, collective phases, and non-equilibrium instabilities. The same features make them promising analogies for **order book dynamics** in financial markets, where liquidity and volatility emerge from collective trader behavior.
 
 ---
 
@@ -78,6 +72,7 @@ This repository currently provides the physics simulation framework and results 
 4. Package code for reproducibility and add interactive visualization of order parameter dynamics.
 
 ---
+
 
 
 
